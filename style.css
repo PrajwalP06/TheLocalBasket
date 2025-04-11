@@ -1,0 +1,39 @@
+
+
+.footer-div{
+    background-color: rgb(97, 95, 94);
+    color: white;
+    font-family:monospace;
+}
+.imgContainer{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.imgContainer img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.container{
+    padding: 10px;
+}
+.col-md-3{
+
+width: 120px;
+height: 200px;
+padding: 20px;
+}
+.col-md-3 img{
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    box-shadow: 2px 2px 2px 2px rgba(10, 10, 10, 0.8);
+}
+.footer{
+    background-color: rgba(4, 4, 112, 0.911);
+    color: white;
+}
