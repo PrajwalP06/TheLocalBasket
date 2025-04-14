@@ -36,4 +36,13 @@ padding: 20px;
 .footer{
     background-color: rgba(4, 4, 112, 0.911);
     color: white;
+    margin-top: 70px;
+}
+.btn-Sty{
+    margin-top: 52px;
+    border-radius: 5px; 
+    background-color: rgb(2, 102, 2);  
+}
+.btn-Sty:hover{
+    background-color: rgba(5, 202, 5, 0.856);
 }
