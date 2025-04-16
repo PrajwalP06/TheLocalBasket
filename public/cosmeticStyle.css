@@ -27,8 +27,8 @@ body{
 
 }
 .itemdesc{
-    font-size: 8px;
-    color: #777;
+    font-size: 9px;
+    color: #242222;
 }
 .itemrate{
     font-size: 10px;
@@ -36,7 +36,7 @@ body{
     color: #000;
 }
 .buttonstyle{
-    background-color:#ff6f61;
+    background-color:green;
     color: white;
     border: none;
     padding:6px 8px;
@@ -45,5 +45,7 @@ body{
     font-size: 10px;
 }
 .buttonstyle:hover{
-    background-color:green;
+    color: white;
+    background-color: #29bf12;
+    transform: translateY(-5px);
 }
