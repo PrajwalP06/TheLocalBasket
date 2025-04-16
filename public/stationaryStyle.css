@@ -5,46 +5,45 @@ body{
     margin-top: 60px;
     border-radius: 8px;
     width: 200px;
+    height: auto;
     text-align: center;
     overflow: hidden;
     background-color: #fff;
 }
 .imgStyle{
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 80px;
+    object-fit: contain;
 }
 .description{
-    padding: 16px;
+    padding: 3px;
 
 }
 .item-name{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 10px 0;
 
 }
 .item-desc{
-    font-size: 14px ;
-    color: #646262;
+    font-size: 9px ;
+    color: #202020;
     margin-bottom: 10px;
 
 }
 .item-rate{
-    font-size: 16px;
+    font-size: 10px;
     font-weight: bold;
     color: black;
 }
 .btnSty{
-    background-color: #ff6f61;
+    background-color: #048f0b;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 6px 8px;
+    border-radius: 2px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 10px;
 }
 .btnSty:hover{
-    background-color: green;
-
+    background-color: #dd8717;
 }
