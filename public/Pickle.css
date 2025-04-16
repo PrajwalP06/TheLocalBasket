@@ -1,20 +1,28 @@
-.outerDiv{
-    height: 200px;
-    width: 80%;
-    border-top-left-radius:8px;
-    border-bottom-right-radius:8px;
-    margin-top: 50px;
-    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.18);
-    overflow: hidden;
+body{
+    background-color: #b8bacf;
+}
+.newCard{
+    width: 100%;
+    height: auto;
     text-align: center;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.28);
+    border-radius:5px;
 }
-.outerDiv img{
-    height: 40%;
-    width: auto;
+.newCard img{
+    height: 100px;
+    width: 100%;
     object-fit: contain;
+    padding: 10px;
 }
-.info-Div{
-    margin-top: 20px;
-    height: 20px;
-    width: auto;
+
+.add-to-cart{
+    background-color: #2f3061;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+}
+.add-to-cart:hover{
+    background-color: #57517e;
 }
