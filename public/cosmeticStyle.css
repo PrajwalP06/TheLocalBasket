@@ -50,3 +50,16 @@ body{
     background-color: #29bf12;
     transform: translateY(-5px);
 }
+
+#cart{
+    border-top: 2px solid gray;
+    margin-top: 20px;
+    padding-top: 10px;
+
+}
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    
+}
