@@ -3,7 +3,7 @@ function addToCart(button){
 const product=button.parentElement;
 const id=product.getAttribute('data-id');
 const name=product.getAttribute('data-name');
-const price=parseFloat(product.getattribute(data-price));
+const price=parseFloat(product.getAttribute('data-price'));
 const existing=cart.find(item=>item.id===id);
 if(existing){
     existing.qty+= 1;
@@ -14,7 +14,7 @@ renderCart();
 
 }
 function removeFromCart(id) {
-    cart=cart.filter(item.id!==id);
+    cart=cart.filter(item=>item.id!==id);
     renderCart();
 }
 function renderCart() {
@@ -39,7 +39,6 @@ function renderCart() {
     const total=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
     const totalDiv=
     document.createElement('div');
-    totalDiv.innerHTML=
-    <strong>Total:rs${total}</strong>;
+    totalDiv.innerHTML=`<strong>Total: rs${total}</strong>`;
     cartDiv.appendChild(totalDiv);
 }
