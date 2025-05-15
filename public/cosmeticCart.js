@@ -30,21 +30,9 @@ function renderCart() {
         document.createElement('div');
         div.calssName='cart-item';
         div.innerHTML=`
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="" alt="...">
-                    <span>${item.name} (x${item.qty})-rs
-                </div>
-                <div class="col-md-6">
-                    ${item.price*item.qty}</span>
-                    <button onclick="removeFromCart('${item.id}')">Remove</button>
-                <div>
-            </div>
-        </div>
-        
-        
-       
+        <span>${item.name} (x${item.qty})-rs
+        ${item.price*item.qty}</span>
+        <button onclick="removeFromCart('${item.id}')">Remove</button>
         `;
         cartDiv.appendChild(div);
     });
