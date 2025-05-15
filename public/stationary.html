@@ -54,23 +54,23 @@
                 <div class="col-md-3 col-6">
                   <div class="product-card">
                     <img class="imgStyle" src="images/kb.jpg">
-                    <div class="description">
+                    <div class="description" data-id="1"data-name="Keyboard"data-price="2000">
                       <h3 class="item-name">Keyboard</h3>
                       <p class="item-desc">Smooth Typing</p>
                       <p class="item-rate"><i class="bi bi-currency-rupee"></i> 2000</p>
-                      <button class="btnSty"> <a href="https://wa.me/+918116134446" style="color: white;"><i class="bi bi-whatsapp"></i>  Add to Cart</a></button>
+                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
                     </div>
                   </div>
-          
+
                 </div>
                 <div class="col-md-3 col-6">
                   <div class="product-card">
                     <img class="imgStyle" src="images/mouse.jpg">
-                    <div class="description">
+                    <div class="description" data-id="2"data-name="Mouse"data-price="500">
                       <h3 class="item-name">Mouse</h3>
                       <p class="item-desc">Wired Mouse</p>
-                      <p class="item-rate"><i class="bi bi-currency-rupee"></i> 50</p>
-                      <button class="btnSty"> <a href="https://wa.me/+918116134446" style="color: white;"><i class="bi bi-whatsapp"></i>  Add to Cart</a></button>
+                      <p class="item-rate"><i class="bi bi-currency-rupee"></i> 500</p>
+                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
                     </div>
                   </div>
           
@@ -78,11 +78,11 @@
                 <div class="col-md-3 col-6">
                   <div class="product-card">
                     <img class="imgStyle" src="images/keychain2.jpg">
-                    <div class="description">
+                    <div class="description" data-id="3"data-name="Keychain"data-price="150">
                       <h3 class="item-name">Keychain</h3>
                       <p class="item-desc">Apple Keychain</p>
-                      <p class="item-rate"><i class="bi bi-currency-rupee"></i> 50</p>
-                      <button class="btnSty"> <a href="https://wa.me/+918116134446" style="color: white;"><i class="bi bi-whatsapp"></i>  Add to Cart</a></button>
+                      <p class="item-rate"><i class="bi bi-currency-rupee"></i> 150</p>
+                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
                     </div>
                   </div>
           
@@ -90,11 +90,11 @@
                 <div class="col-md-3 col-6">
                   <div class="product-card">
                     <img class="imgStyle" src="images/tumbler 1.jpg">
-                    <div class="description">
+                    <div class="description" data-id="4"data-name="Tumbler"data-price="1500">
                       <h3 class="item-name">Tumbler</h3>
                       <p class="item-desc">Tumbler Bottle with Straw</p>
-                      <p class="item-rate"><i class="bi bi-currency-rupee"></i> 50</p>
-                      <button class="btnSty"> <a href="https://wa.me/+918116134446" style="color: white;"><i class="bi bi-whatsapp"></i>  Add to Cart</a></button>
+                      <p class="item-rate"><i class="bi bi-currency-rupee"></i> 1500</p>
+                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
                     </div>
                   </div>
                 </div>
@@ -143,6 +143,10 @@
 
       </div>
     </section>
+    <div id="cart"> 
+      <p>this is cart</p>
+    </div>
+    <script src="cosmeticCart.js"></script>
   </body>
           
 </html>
