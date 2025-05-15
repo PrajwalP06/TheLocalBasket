@@ -15,9 +15,12 @@
     padding: 10px;
 }
 .footer{
+    display: flex;
+    justify-content: center;
     background-color: rgba(4, 4, 112, 0.911);
     color: white;
     margin-top: 10px;
+    
 }
 .Lgn-MainDiv{
     height: 320px;
