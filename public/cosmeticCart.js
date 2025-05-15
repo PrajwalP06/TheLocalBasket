@@ -32,7 +32,7 @@ function renderCart() {
         div.innerHTML=`
         <span>${item.name} (x${item.qty})-rs
         ${item.price*item.qty}</span>
-        <button onclick="removeFromCart('${item.id}')">Remove</button>
+        <button onclick="removeFromCart('${item.id}')">-</button>
         `;
         cartDiv.appendChild(div);
     });
