@@ -28,7 +28,7 @@ function renderCart() {
     cart.forEach(item=>{
         const div=
         document.createElement('div');
-        div.calssName='cart-item';
+        div.className='cart-item';
         div.innerHTML=`
         <div class="col-md-12">
             <div class="row">
@@ -36,7 +36,7 @@ function renderCart() {
                     <span>${item.name}
                 </div>
                 <div class="col-md-2">
-                    (<x${item.qty}) 
+                    (x${item.qty}) 
                 </div>
                 <div class="col-md-3">
                     Rs. ${item.price*item.qty}</span>
