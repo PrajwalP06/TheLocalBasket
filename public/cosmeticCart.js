@@ -36,7 +36,7 @@ function renderCart() {
                     <span>${item.name}
                 </div>
                 <div class="col-md-2">
-                    (<x${item.qty}) 
+                    (x${item.qty}) 
                 </div>
                 <div class="col-md-3">
                     Rs. ${item.price*item.qty}</span>
