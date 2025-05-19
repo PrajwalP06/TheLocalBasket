@@ -28,7 +28,7 @@ function renderCart() {
     cart.forEach(item=>{
         const div=
         document.createElement('div');
-        div.calssName='cart-item';
+        div.className='cart-item';
         div.innerHTML=`
         <div class="col-md-12">
             <div class="row">
