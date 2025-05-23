@@ -30,9 +30,20 @@ function renderCart() {
         document.createElement('div');
         div.className='cart-item';
         div.innerHTML=`
-        <span>${item.name} (x${item.qty})-rs
-        ${item.price*item.qty}</span>
-        <button onclick="removeFromCart('${item.id}')">-</button>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-7">
+                    <span>${item.name}
+                </div>
+                <div class="col-md-2">
+                    (x${item.qty}) 
+                </div>
+                <div class="col-md-3">
+                    Rs. ${item.price*item.qty}</span>
+                    <button style="border:none;background-color: rgb(253,252,252);" onclick="removeFromCart('${item.id}')"><i class="bi bi-trash" style="color:red;"></i></button>
+                </div>
+            </div>
+        </div>
         `;
         cartDiv.appendChild(div);
     });
