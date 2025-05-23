@@ -5,6 +5,7 @@ const id=product.getAttribute('data-id');
 const name=product.getAttribute('data-name');
 const price=parseFloat(product.getAttribute('data-price'));
 const existing=cart.find(item=>item.id===id);
+const img=product.getAttribute('data-image');
 if(existing){
     existing.qty+= 1;
 }else{
@@ -32,13 +33,16 @@ function renderCart() {
         div.innerHTML=`
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-4">
+                    <img src="#" alt="...">
+                </div>
+                <div class="col-md-4">
                     <span>${item.name}
                 </div>
                 <div class="col-md-2">
                     (x${item.qty}) 
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     Rs. ${item.price*item.qty}</span>
                     <button style="border:none;background-color: rgb(253,252,252);" onclick="removeFromCart('${item.id}')"><i class="bi bi-trash" style="color:red;"></i></button>
                 </div>
