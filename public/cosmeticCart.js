@@ -50,6 +50,6 @@ function renderCart() {
     const total=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
     const totalDiv=
     document.createElement('div');
-    totalDiv.innerHTML=`<strong>Total: rs${total}</strong>`;
+    totalDiv.innerHTML=`<strong>Total: Rs${total}</strong>`;
     cartDiv.appendChild(totalDiv);
 }
