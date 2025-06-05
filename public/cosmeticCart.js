@@ -14,6 +14,24 @@ if(existing){
 renderCart();
 
 }
+function increaseQty(id) {
+    const item = cart.find(item => item.id === id);
+    if (item) {
+        item.qty += 1;
+        renderCart();
+    }
+}
+function decreaseQty(id) {
+    const item = cart.find(item => item.id === id);
+    if (item) {
+        item.qty -= 1;
+        if (item.qty <= 0) {
+            removeFromCart(id);
+        } else {
+            renderCart();
+        }
+    }
+}
 function removeFromCart(id) {
     cart=cart.filter(item=>item.id!==id);
     renderCart();
@@ -26,34 +44,42 @@ function renderCart() {
         cartDiv.innerHTML='<p> Your cart is empty.</p>';
         return;
     }
-    cart.forEach(item=>{
-        const div=
-        document.createElement('div');
-        div.className='cart-item';
-        div.innerHTML=`
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="#" alt="...">
-                </div>
-                <div class="col-md-4">
-                    <span>${item.name}
-                </div>
+     cart.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+            <div class="row mb-2">
+                <div class="col-md-4">${item.name}</div>
                 <div class="col-md-2">
-                    (x${item.qty}) 
+                    <button onclick="decreaseQty('${item.id}')">-</button>
+                    ${item.qty}
+                    <button onclick="increaseQty('${item.id}')">+</button>
                 </div>
+                <div class="col-md-2">Rs. ${item.price}</div>
+                <div class="col-md-2">Rs. ${item.price * item.qty}</div>
                 <div class="col-md-2">
-                    Rs. ${item.price*item.qty}</span>
-                    <button style="border:none;background-color: rgb(253,252,252);" onclick="removeFromCart('${item.id}')"><i class="bi bi-trash" style="color:red;"></i></button>
+                    <button onclick="removeFromCart('${item.id}')">
+                        <i class="bi bi-trash" style="color:red;"></i>
+                    </button>
                 </div>
             </div>
-        </div>
+            <div>
+                <button class=Btn-Checkout id=checkout>Checkout</button>
+            </div>
         `;
         cartDiv.appendChild(div);
     });
-    const total=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
-    const totalDiv=
-    document.createElement('div');
-    totalDiv.innerHTML=`<strong>Total: Rs${total}</strong>`;
+
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const totalDiv = document.createElement('div');
+    totalDiv.innerHTML = `<strong>Total: Rs. ${total}</strong>`;
     cartDiv.appendChild(totalDiv);
+}
+function checkout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+    alert("Proceeding to checkout with total amount: Rs. " + cart.reduce((sum, item) => sum + item.price * item.qty, 0));
+    // You can add backend integration or redirect here.
 }
