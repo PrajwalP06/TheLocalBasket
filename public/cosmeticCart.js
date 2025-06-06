@@ -31,7 +31,8 @@ function renderCart() {
         document.createElement('div');
         div.className='cart-item';
         div.innerHTML=`
-        <div class="col-md-12">
+                <div class="col-md-12">
+       
             <div class="row">
                 <div class="col-md-4">
                     <img src="#" alt="...">
