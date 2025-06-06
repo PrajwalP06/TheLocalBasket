@@ -7,26 +7,65 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
     <style>
+        body{
+            background-color:rgb(218, 213, 213);
+            padding: 50px;
+        }
         .test{
-            width: 150px;
-            height: 200px;
+            width: auto;
+            height: auto;
             margin-right: 10px;
-            padding: 30px;
-            margin-left: 30px;
-            box-shadow: 1px 1px 2px 2px rgb(219, 210, 210);
+            padding: 10px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          
+        }
+        .mT{
+            font-size: 2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .inpSty{
+            width: 100%;
+            height: 45px;
+            border:0cap;
             border-radius: 10px;
+            box-shadow: 1px 1px 2px 2px rgb(129, 127, 127);
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(8, 7, 7);
+            font-size: 1.2rem;
+            padding: 5px;
+        }
+        .outerDiv{
+            border:none;
+            width: auto;
+            padding: 20px;
+            box-shadow: 1px 1px 2px 2px rgb(131, 126, 126) ;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <center><h1>Ringchen</h1><br>
-    <h2>this is new line</h2></center>
-    <div class="col-md-12">
+    <div>
+        <marquee direction="right" class="mT"> Welcome to my page</marquee>
+    </div>
+    <section class="outerDiv">
+        <div class="col-md-12">
         <div class="row">
-            <div class="col-md-4 test"></div>
-            <div class="col-md-4 test">2nd</div>
-            <div class="col-md-4 test">3rd</div>
+            <div class="col-md-4 test">
+                <input type="text" class="inpSty" placeholder="enter first name"> 
+
+            </div>
+            <div class="col-md-4 test">
+                <input type="text" class="inpSty" placeholder="enter middle name">
+            </div>
+            <div class="col-md-4 test">
+                <input type="text" class="inpSty" placeholder="enter last name">
+            </div>
         </div>
     </div>
+    </section>
 </body>
 </html>
