@@ -68,7 +68,7 @@ function renderCart() {
                 <div class="col-md-2">Rs. ${item.price}</div>
                 <div class="col-md-2">Rs. ${item.price * item.qty}</div>
                 <div class="col-md-2">
-                    <button onclick="removeFromCart('${item.id}')">
+                    <button onclick="removeFromCart('${item.id}')" style="border:none; background-color:white;">
                         <i class="bi bi-trash" style="color:red;"></i>
                     </button>
                 </div>
