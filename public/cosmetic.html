@@ -44,9 +44,14 @@
             </div>
           </div>
         </div>
-      </nav>
+    </nav>
+ <div class="col-md-6 text-end" style="margin-top:50px;">
+          <button class="btn btn-light cart-button" id="openCartBtn">
+              <i class="bi bi-cart3"></i> View Cart
+              <span class="badge bg-danger rounded-pill" id="cartCount">0</span>
+          </button>
+      </div>
 
-      <!--Cards-->
 
     <div class="container">
       <div class="col-md-12">
@@ -58,7 +63,7 @@
                 <h3 class="itemName"> Dot&Key Sunscreen</h3>
                 <p class="itemdesc">  SPF 50++with Niacinamide</p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 500</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                 <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Dot&Key Sunscreen', 500)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -69,7 +74,7 @@
                 <h3 class="itemName">plum Sunscreen </h3>
                 <p class="itemdesc">Rice water & Niacinamide</p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 800</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Plum Sunscreen', 800)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -80,8 +85,7 @@
                 <h3 class="itemName"> Fit Me Foundation</h3>
                 <p class="itemdesc">Matte +Poreless Foundation</p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 400</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
-              </div>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Fit Me Foundation', 400)">Add to Cart</button>              </div>
             </div>
           </div>
           <div class="col-md-3 col-6">
@@ -91,7 +95,7 @@
                 <h3 class="itemName"> Fit Me Concealer</h3>
                 <p class="itemdesc">oil-free liquid Concealer </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 500</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Fit Me Concealer', 500)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -102,7 +106,7 @@
                 <h3 class="itemName"> Minimalist Face Toner</h3>
                 <p class="itemdesc">For minimizing pore size  </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 600</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Minimalist Face Toner', 600)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -113,7 +117,7 @@
                 <h3 class="itemName"> Moisturizer</h3>
                 <p class="itemdesc"> Soothes & Hydration skin </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 490</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Moisturizer', 490)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -124,7 +128,7 @@
                 <h3 class="itemName"> Moisturizer</h3>
                 <p class="itemdesc"> Soothes & Hydration skin </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 490</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Moisturizer', 490)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -135,7 +139,7 @@
                 <h3 class="itemName"> Plum </h3>
                 <p class="itemdesc"> Retinol Serum </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 599</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Plum Retinol Serum', 599)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -146,7 +150,7 @@
                 <h3 class="itemName">Foxtale Face Serum</h3>
                 <p class="itemdesc"> Vitamin C Brightning serum </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 570</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Foxtale Face Serum', 570)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -157,7 +161,7 @@
                 <h3 class="itemName">  Plum Face serum</h3>
                 <p class="itemdesc"> Soothes & Hydration skin </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 500</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Plum Face Serum', 500)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -168,7 +172,7 @@
                 <h3 class="itemName"> Plum Face Wash</h3>
                 <p class="itemdesc"> Green Tea face wash controls oil  </p>
                 <p class="itemrate"><i class="bi bi-currency-rupee"></i> 500</p>
-                <button class="buttonstyle" onclick="addToCart(this)">  Add to Cart</button>  
+                <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Plum Face Wash', 500)">Add to Cart</button>  
               </div>
             </div>
           </div>
@@ -200,12 +204,235 @@
     </section>
 
 
-    <div id="cart"> 
-      <p>this is cart</p>
-    </div>
-    <script src="cosmeticCart.js"></script>
+    <!-- Cart Modal Structure -->
+<div class="modal fade" id="cart-modal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header bg-light">
+              <h5 class="modal-title">Your Shopping Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Cart items will be rendered here -->
+          </div>
+          <div class="modal-footer">
+              <!-- Buttons will be added dynamically -->
+          </div>
+      </div>
+  </div>
+</div>
+ <!-- Cart Modal -->
+ <div class="modal fade" id="cartModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title"><i class="bi bi-cart3"></i> Your Shopping Cart</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" id="cartBody">
+              <!-- Cart items will be rendered here -->
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+              <button type="button" class="btn btn-success btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+          </div>
+      </div>
+  </div>
+</div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Cart array to store items
+  let cart = [];
+  
+  // DOM elements
+  const openCartBtn = document.getElementById('openCartBtn');
+  const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+  const cartBody = document.getElementById('cartBody');
+  const cartCount = document.getElementById('cartCount');
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  
+  // Open cart modal
+  openCartBtn.addEventListener('click', () => {
+      renderCart();
+      cartModal.show();
+  });
+  
+  // Add to cart function
+  function addToCart(id, name, price) {
+      const existingItem = cart.find(item => item.id === id);
+      
+      if (existingItem) {
+          existingItem.qty++;
+      } else {
+          cart.push({
+              id: id,
+              name: name,
+              price: price,
+              qty: 1
+          });
+      }
+      
+      // Update cart count
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+      
+      // Show success message
+      showAlert(`${name} added to cart!`, 'success');
+      
+      // Re-render cart if modal is open
+      if (document.getElementById('cartModal').classList.contains('show')) {
+          renderCart();
+      }
+  }
+  
+  // Remove from cart function
+  function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      renderCart();
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+  }
+  
+  // Increase quantity function
+  function increaseQty(id) {
+      const item = cart.find(item => item.id === id);
+      if (item) {
+          item.qty++;
+          renderCart();
+          cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+      }
+  }
+  
+  // Decrease quantity function
+  function decreaseQty(id) {
+      const item = cart.find(item => item.id === id);
+      if (item) {
+          item.qty--;
+          if (item.qty < 1) {
+              removeFromCart(id);
+          } else {
+              renderCart();
+              cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+          }
+      }
+  }
+  
+  // Render cart function
+  function renderCart() {
+      cartBody.innerHTML = "";
+      
+      if (cart.length === 0) {
+          cartBody.innerHTML = `
+              <div class="empty-cart">
+                  <i class="bi bi-cart-x"></i>
+                  <h4>Your cart is empty</h4>
+                  <p>Add some products to your cart</p>
+              </div>
+          `;
+          return;
+      }
+      
+      cart.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'cart-item';
+          itemDiv.innerHTML = `
+              <div class="row align-items-center">
+                  <div class="col-md-5">
+                      <strong>${item.name}</strong>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="d-flex align-items-center">
+                          <button class="btn btn-sm btn-outline-secondary quantity-btn" onclick="decreaseQty('${item.id}')">-</button>
+                          <span class="mx-2">${item.qty}</span>
+                          <button class="btn btn-sm btn-outline-secondary quantity-btn" onclick="increaseQty('${item.id}')">+</button>
+                      </div>
+                  </div>
+                  <div class="col-md-2 text-end">
+                      Rs. ${item.price.toLocaleString()}
+                  </div>
+                  <div class="col-md-2 text-end fw-bold">
+                      Rs. ${(item.price * item.qty).toLocaleString()}
+                  </div>
+                  <div class="col-md-1 text-center">
+                      <button class="btn btn-sm btn-link text-danger" onclick="removeFromCart('${item.id}')">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </div>
+              </div>
+          `;
+          cartBody.appendChild(itemDiv);
+      });
+      
+      const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const totalDiv = document.createElement('div');
+      totalDiv.className = 'total-row';
+      totalDiv.innerHTML = `
+          <div class="row">
+              <div class="col-8 text-end">Subtotal:</div>
+              <div class="col-4 text-end">Rs. ${total.toLocaleString()}</div>
+          </div>
+          <div class="row">
+              <div class="col-8 text-end">Shipping:</div>
+              <div class="col-4 text-end">Rs. ${total > 0 ? '200' : '0'}</div>
+          </div>
+          <div class="row mt-2">
+              <div class="col-8 text-end"><h5>Total:</h5></div>
+              <div class="col-4 text-end"><h5>Rs. ${(total > 0 ? total + 200 : 0).toLocaleString()}</h5></div>
+          </div>
+          
+          <div class="mt-4">
+              <h5><i class="bi bi-truck"></i> Shipping Information</h5>
+              <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Full Name">
+              </div>
+              <div class="mb-3">
+                  <textarea class="form-control" placeholder="Shipping Address" rows="2"></textarea>
+              </div>
+              <div class="mb-3">
+                  <input type="tel" class="form-control" placeholder="Contact Number">
+              </div>
+          </div>
+      `;
+      cartBody.appendChild(totalDiv);
+  }
+  
+  // Checkout button handler
+  checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) {
+          showAlert('Your cart is empty!', 'warning');
+          return;
+      }
+      
+      cartModal.hide();
+      showAlert('Order placed successfully!', 'success');
+      cart = [];
+      cartCount.textContent = '0';
+  });
+  
+  // Show alert function
+  function showAlert(message, type) {
+      // Remove existing alerts
+      const existingAlert = document.querySelector('.alert');
+      if (existingAlert) existingAlert.remove();
+      
+      const alertDiv = document.createElement('div');
+      alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+      alertDiv.style.position = 'fixed';
+      alertDiv.style.top = '20px';
+      alertDiv.style.right = '20px';
+      alertDiv.style.zIndex = '9999';
+      alertDiv.innerHTML = `
+          ${message}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      `;
+      
+      document.body.appendChild(alertDiv);
+      
+      // Auto remove after 3 seconds
+      setTimeout(() => {
+          alertDiv.remove();
+      }, 3000);
+  }
+</script>
 
 </body>
 </html>
