@@ -76,7 +76,7 @@
                       <h3>Green Chilli</h3>
                       <p>Fried Green chilli marinated with various spices.</p>
                       <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Green Chilli', 199)">Add to Cart</button> 
+                      <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Green Chilli', 199,'images/greenChilli Pickle.PNG')">Add to Cart</button> 
                       
                     </div>
                   </div>
@@ -163,7 +163,8 @@
                       <h3>Finger Chips</h3>
                       <p>Fried and salted Finger chips.</p>
                       <p><i class="bi bi-currency-rupee"></i><strong>49</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p8', 'Finger Chips', 49)">Add to Cart</button>                      
+                      <button class="btn btn-primary w-100" onclick="addToCart('p8', 'Finger Chips', 49, 'images/Finger-Chips.PNG')">Add to Cart</button>
+                     
                     </div>
                   </div>
                 </div>
@@ -177,9 +178,6 @@
     <!--Footer-->
     <section class="footer" >
       <div>
-
-      
-
           <h4>Social Links</h4>
           <a href="#" style="color: white;">
           <i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
@@ -255,7 +253,7 @@
   });
   
   // Add to cart function
-  function addToCart(id, name, price) {
+  function addToCart(id, name, price, imgSrc) {
       const existingItem = cart.find(item => item.id === id);
       
       if (existingItem) {
@@ -263,6 +261,7 @@
       } else {
           cart.push({
               id: id,
+              img: imgSrc,  // ✅ Add image to cart object
               name: name,
               price: price,
               qty: 1
@@ -332,7 +331,11 @@
           itemDiv.className = 'cart-item';
           itemDiv.innerHTML = `
               <div class="row align-items-center">
+                  <div class="col-md-1">
+                     <img src="${item.img}" alt="${item.name}" class="img-fluid rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                   </div>
                   <div class="col-md-5">
+                    
                       <strong>${item.name}</strong>
                   </div>
                   <div class="col-md-2">
@@ -368,7 +371,7 @@
           </div>
           <div class="row">
               <div class="col-8 text-end">Shipping:</div>
-              <div class="col-4 text-end">Rs. ${total > 0 ? '200' : '0'}</div>
+              <div class="col-4 text-end">Rs. ${total > 0 ? '80' : '0'}</div>
           </div>
           <div class="row mt-2">
               <div class="col-8 text-end"><h5>Total:</h5></div>
