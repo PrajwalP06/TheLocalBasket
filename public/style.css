@@ -1,15 +1,4 @@
-.imgContainer{
-    height: 250px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-.imgContainer img{
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
-}
+
 
 .container{
     padding: 10px;
