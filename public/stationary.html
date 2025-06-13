@@ -55,6 +55,14 @@
           <span class="badge bg-danger rounded-pill" id="cartCount">0</span>
       </button>
   </div>
+         <!--Header Image-->
+    <section>
+      <div style="display: flex; height: 200px; width: 100vw; border: 2px solid#000;"  >
+        <video autoplay loop muted playsinline  style="height: auto; width: 100%; object-fit:contain;">
+          <source src="images/offer.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
    
         <!--Cards-->
           <div class="container">
@@ -67,7 +75,7 @@
                       <h3 class="item-name">Keyboard</h3>
                       <p class="item-desc">Smooth Typing</p>
                       <p class="item-rate"><i class="bi bi-currency-rupee"></i> 2000</p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p6', 'Banana Chips', 99)">Add to Cart</button>                    </div>
+                      <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Keyboard', 2000,'images/kb.jpg')">Add to Cart</button>                    </div>
                   </div>
 
                 </div>
@@ -78,7 +86,7 @@
                       <h3 class="item-name">Mouse</h3>
                       <p class="item-desc">Wired Mouse</p>
                       <p class="item-rate"><i class="bi bi-currency-rupee"></i> 500</p>
-                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
+                      <button class="btn btn-primary w-100" onclick="addToCart('p2', 'Mouse', 500,'images/mouse.jpg')">Add to Cart</button>
                     </div>
                   </div>
           
@@ -90,7 +98,7 @@
                       <h3 class="item-name">Keychain</h3>
                       <p class="item-desc">Apple Keychain</p>
                       <p class="item-rate"><i class="bi bi-currency-rupee"></i> 150</p>
-                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
+                      <button class="btn btn-primary w-100" onclick="addToCart('p3', 'Keychain', 150,'images/keychain2.jpg')">Add to Cart</button>
                     </div>
                   </div>
           
@@ -102,7 +110,7 @@
                       <h3 class="item-name">Tumbler</h3>
                       <p class="item-desc">Tumbler Bottle with Straw</p>
                       <p class="item-rate"><i class="bi bi-currency-rupee"></i> 1500</p>
-                      <button class="btnSty" onclick="addToCart(this)"> Add to Cart</button>
+                      <button class="btn btn-primary w-100" onclick="addToCart('p6', 'Tumbler', 1500,'images/tumbler 1.jpg')">Add to Cart</button>
                     </div>
                   </div>
                 </div>
@@ -185,7 +193,7 @@
   });
   
   // Add to cart function
-  function addToCart(id, name, price) {
+  function addToCart(id, name, price, imgSrc) {
       const existingItem = cart.find(item => item.id === id);
       
       if (existingItem) {
@@ -193,6 +201,7 @@
       } else {
           cart.push({
               id: id,
+              img: imgSrc,  // ✅ Add image to cart object
               name: name,
               price: price,
               qty: 1
@@ -262,7 +271,10 @@
           itemDiv.className = 'cart-item';
           itemDiv.innerHTML = `
               <div class="row align-items-center">
-                  <div class="col-md-5">
+                  <div class="col-md-1">
+                     <img src="${item.img}" alt="${item.name}" class="img-fluid rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                   </div>
+                  <div class="col-md-4">
                       <strong>${item.name}</strong>
                   </div>
                   <div class="col-md-2">
