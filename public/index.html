@@ -12,92 +12,119 @@
   </head>
   <body>
 
-    <!--Nav Bar-->
-    <nav class="navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">The Local Basket</a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">theLocalBasket</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!--Nav Bar-->
+        <nav class="navbar bg-body-tertiary fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">The Local Basket</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">theLocalBasket</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Login.html">Admins Only</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cosmetic.html">Cosmetic</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="stationary.html">stationary</a>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
           </div>
-          
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Login.html">Admins Only</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cosmetic.html">Cosmetic</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="stationary.html">stationary</a>
-              </li>
-            </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+        </nav>
+        <br>
+        <br>
+        <div class="col-md-6 text-end">
+          <button class="btn btn-light cart-button" id="openCartBtn">
+              <i class="bi bi-cart3"></i> View Cart
+              <span class="badge bg-danger rounded-pill" id="cartCount">0</span>
+          </button>
+      </div>
+      
+      <!--Header Image-->
+    <section>
+      <div style="display: flex; justify-content: center; align-items: center; border:2px solid #000;">
+        <div style="display: flex; height: 200px; width:auto;"  >
+          <img src="images/Grand-Opening.png">
+          <video autoplay loop muted playsinline  style="height: auto; width: 100%; object-fit:fill;">
+            <source src="images/offer.mp4" type="video/mp4">
+          </video>
+          <img src="images/sales3.png">
         </div>
       </div>
-    </nav>
-    <br>
-    <br>
-    <div class="col-md-6 text-end">
-      <button class="btn btn-light cart-button" id="openCartBtn">
-          <i class="bi bi-cart3"></i> View Cart
-          <span class="badge bg-danger rounded-pill" id="cartCount">0</span>
-      </button>
-  </div>
-   
-    <!--Header Image-->
-    <section>
-      <div style="display: flex; height: 200px; width: 100vw; border: 2px solid#000;"  >
-        <video autoplay loop muted playsinline  style="height: auto; width: 100%; object-fit:contain;">
-          <source src="images/offer.mp4" type="video/mp4">
-        </video>
-      </div>
-    </section>
-
-    <!--Card-->
-    <section>
-        <div class="container">
-          <div class="col-md-12">
-            <div class="row g-4">
-              
-                <div class="col-md-3 col-6">
-                  <div class="newCard">
-                    <img src="images/greenChilli Pickle.PNG">
-                    <div>
-                      <h3>Green Chilli</h3>
-                      <p>Fried Green chilli marinated with various spices.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Green Chilli', 199,'images/greenChilli Pickle.PNG')">Add to Cart</button> 
-                      
+          
+      </section>
+          <div class="container-fluid" style="padding: 20px;">
+            <div class="col-md-12">
+              <div class="row">
+                <!--First column-->
+                <div class="col-md-3">
+                    <div class="newCard">
+                      <img src="images/greenChilli Pickle.PNG">
+                      <div>
+                        <h3>Green Chilli</h3>
+                        <p>Fried Green chilli marinated with various spices.</p>
+                        <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Green Chilli', 199,'images/greenChilli Pickle.PNG')">Add to Cart</button> 
+                        
+                      </div>
                     </div>
-                  </div>
+                  
+                  
+                    <div class="newCard">
+                      <img src="images/chicken Pickle.PNG">
+                      <div>
+                        <h3>Chicken Pickle</h3>
+                        <p>Rosted chicken mixed with spices.</p>
+                        <p><i class="bi bi-currency-rupee"></i><strong>399</strong></p>
+                        <button class="btn btn-primary w-100" onclick="addToCart('p5', 'Chicken Pickle', 399, 'images/chicken Pickle.PNG')">Add to Cart</button>
+                            
+                      </div>
+                    </div>
                 </div>
-              
-                <div class="col-md-3 col-6 ">
+
+                <!-- this is second column-->
+                <div class="col-md-3">
                   <div class="newCard">
-                    <img src="images/mango Pickle.PNG">
+                      <img src="images/mango Pickle.PNG">
                     <div>
                       <h3>Mango Pickle</h3>
                       <p>Raw Mango mixed with boiled oil and spices</p>
                       <p><i class="bi bi-currency-rupee"></i><strong>299</strong></p>
                       <button class="btn btn-primary w-100" onclick="addToCart('p2', 'Mango Pickle', 299, 'images/mango Pickle.PNG')">Add to Cart</button> 
-  
+        
+                    </div>
+                  </div> 
+
+                  <div class="newCard">
+                      <img src="images/Banana Chips.PNG">
+                    <div> 
+                      <h3>Banana Chips</h3>
+                      <p>Fried and salted banana chips.</p>
+                      <p><i class="bi bi-currency-rupee"></i><strong>99</strong></p>
+                      <button class="btn btn-primary w-100" onclick="addToCart('p6', 'Banana Chips', 99,'images/Banana Chips.PNG')">Add to Cart</button>   
+                            
                     </div>
                   </div>
                 </div>
-            
-                <div class="col-md-3 col-6 ">
+
+                <!--third column-->
+                <div class="col-md-3">
                   <div class="newCard">
                     <img src="images/Mula ko acchar.PNG">
                     <div>
@@ -105,48 +132,10 @@
                       <p>Radish mixed with various spices and marinated with boiled oil</p>
                       <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
                       <button class="btn btn-primary w-100" onclick="addToCart('p3', 'Radish Pickle', 199, 'images/Mula ko acchar.PNG')">Add to Cart</button>
-                      
+                            
                     </div>
                   </div>
-                </div>
 
-                <div class="col-md-3 col-6 ">
-                  <div class="newCard">
-                    <img src="images/p4.png">
-                    <div>
-                      <h3>Soyachunk Pickle</h3>
-                      <p>Fried soyachunks marinated with different spices.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p4', 'Soyachunk Pickle', 199, 'images/p4.png')">Add to Cart</button>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-6 ">
-                  <div class="newCard">
-                    <img src="images/chicken Pickle.PNG">
-                    <div>
-                      <h3>Chicken Pickle</h3>
-                      <p>Rosted chicken mixed with spices.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>399</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p5', 'Chicken Pickle', 399, 'images/chicken Pickle.PNG')">Add to Cart</button>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-6 ">
-                  <div class="newCard">
-                    <img src="images/Banana Chips.PNG">
-                    <div> 
-                      <h3>Banana Chips</h3>
-                      <p>Fried and salted banana chips.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>99</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p6', 'Banana Chips', 99,'images/Banana Chips.PNG')">Add to Cart</button>   
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-6 ">
                   <div class="newCard">
                     <img src="images/Potato chips.PNG">
                     <div>
@@ -154,11 +143,22 @@
                       <p>Fried and salted Potato chips.</p>
                       <p><i class="bi bi-currency-rupee"></i><strong>99</strong></p>
                       <button class="btn btn-primary w-100" onclick="addToCart('p7', 'Potato Chips', 99, 'images/Potato chips.PNG')">Add to Cart</button>
-                      
+                          
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 col-6 ">
+                <!--fourth column-->
+                <div class="col-md-3">
+                  <div class="newCard">
+                    <img src="images/p4.png">
+                    <div>
+                      <h3>Soyachunk Pickle</h3>
+                      <p>Fried soyachunks marinated with different spices.</p>
+                      <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
+                      <button class="btn btn-primary w-100" onclick="addToCart('p4', 'Soyachunk Pickle', 199, 'images/p4.png')">Add to Cart</button>            
+                    </div>
+                  </div>
+
                   <div class="newCard">
                     <img src="images/Finger-Chips.PNG">
                     <div>
@@ -166,274 +166,272 @@
                       <p>Fried and salted Finger chips.</p>
                       <p><i class="bi bi-currency-rupee"></i><strong>49</strong></p>
                       <button class="btn btn-primary w-100" onclick="addToCart('p8', 'Finger Chips', 49, 'images/Finger-Chips.PNG')">Add to Cart</button>
-                     
+                        
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
+          
+        </div>
+      
+        <!--Footer-->
+        <section class="footer" >
+          <div>
+              <h4>Social Links</h4>
+              <a href="#" style="color: white;">
+              <i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+
+              <span style="margin-left: 10px;">
+                <a href="#" style="color: white;">
+                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+              </span>
+      
+              <span style="margin-left: 10px;">
+                <a href="https://wa.me/+919609010193" style="color: white;">
+                <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i></a>
+              </span>
+
           </div>
-
-   </section>
-    
-    <!--Footer-->
-    <section class="footer" >
-      <div>
-          <h4>Social Links</h4>
-          <a href="#" style="color: white;">
-          <i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
-
-          <span style="margin-left: 10px;">
-            <a href="#" style="color: white;">
-            <i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
-          </span>
-  
-          <span style="margin-left: 10px;">
-            <a href="https://wa.me/+919609010193" style="color: white;">
-            <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i></a>
-          </span>
-
-      </div>
-    </section>
-    
-
+        </section>
+        
 
 
-<!-- Cart Modal Structure -->
-<div class="modal fade" id="cart-modal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-          <div class="modal-header bg-light">
-              <h5 class="modal-title">Your Shopping Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-              <!-- Cart items will be rendered here -->
-          </div>
-          <div class="modal-footer">
-              <!-- Buttons will be added dynamically -->
-          </div>
-      </div>
-  </div>
-</div>
- <!-- Cart Modal -->
- <div class="modal fade" id="cartModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title"><i class="bi bi-cart3"></i> Your Shopping Cart</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body" id="cartBody">
-              <!-- Cart items will be rendered here -->
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
-              <button type="button" class="btn btn-success btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+
+    <!-- Cart Modal Structure -->
+    <div class="modal fade" id="cart-modal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header bg-light">
+                  <h5 class="modal-title">Your Shopping Cart</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                  <!-- Cart items will be rendered here -->
+              </div>
+              <div class="modal-footer">
+                  <!-- Buttons will be added dynamically -->
+              </div>
           </div>
       </div>
-  </div>
-</div>
+    </div>
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title"><i class="bi bi-cart3"></i> Your Shopping Cart</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body" id="cartBody">
+                  <!-- Cart items will be rendered here -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                  <button type="button" class="btn btn-success btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+              </div>
+          </div>
+      </div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Cart array to store items
-  let cart = [];
-  
-  // DOM elements
-  const openCartBtn = document.getElementById('openCartBtn');
-  const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
-  const cartBody = document.getElementById('cartBody');
-  const cartCount = document.getElementById('cartCount');
-  const checkoutBtn = document.getElementById('checkoutBtn');
-  
-  // Open cart modal
-  openCartBtn.addEventListener('click', () => {
-      renderCart();
-      cartModal.show();
-  });
-  
-  // Add to cart function
-  function addToCart(id, name, price, imgSrc) {
-      const existingItem = cart.find(item => item.id === id);
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Cart array to store items
+      let cart = [];
       
-      if (existingItem) {
-          existingItem.qty++;
-      } else {
-          cart.push({
-              id: id,
-              img: imgSrc,  // ✅ Add image to cart object
-              name: name,
-              price: price,
-              qty: 1
-          });
-      }
+      // DOM elements
+      const openCartBtn = document.getElementById('openCartBtn');
+      const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+      const cartBody = document.getElementById('cartBody');
+      const cartCount = document.getElementById('cartCount');
+      const checkoutBtn = document.getElementById('checkoutBtn');
       
-      // Update cart count
-      cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
-      
-      // Show success message
-      showAlert(`${name} added to cart!`, 'success');
-      
-      // Re-render cart if modal is open
-      if (document.getElementById('cartModal').classList.contains('show')) {
+      // Open cart modal
+      openCartBtn.addEventListener('click', () => {
           renderCart();
+          cartModal.show();
+      });
+      
+      // Add to cart function
+      function addToCart(id, name, price, imgSrc) {
+          const existingItem = cart.find(item => item.id === id);
+          
+          if (existingItem) {
+              existingItem.qty++;
+          } else {
+              cart.push({
+                  id: id,
+                  img: imgSrc,  // ✅ Add image to cart object
+                  name: name,
+                  price: price,
+                  qty: 1
+              });
+          }
+          
+          // Update cart count
+          cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+          
+          // Show success message
+          showAlert(`${name} added to cart!`, 'success');
+          
+          // Re-render cart if modal is open
+          if (document.getElementById('cartModal').classList.contains('show')) {
+              renderCart();
+          }
       }
-  }
-  
-  // Remove from cart function
-  function removeFromCart(id) {
-      cart = cart.filter(item => item.id !== id);
-      renderCart();
-      cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
-  }
-  
-  // Increase quantity function
-  function increaseQty(id) {
-      const item = cart.find(item => item.id === id);
-      if (item) {
-          item.qty++;
+      
+      // Remove from cart function
+      function removeFromCart(id) {
+          cart = cart.filter(item => item.id !== id);
           renderCart();
           cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
       }
-  }
-  
-  // Decrease quantity function
-  function decreaseQty(id) {
-      const item = cart.find(item => item.id === id);
-      if (item) {
-          item.qty--;
-          if (item.qty < 1) {
-              removeFromCart(id);
-          } else {
+      
+      // Increase quantity function
+      function increaseQty(id) {
+          const item = cart.find(item => item.id === id);
+          if (item) {
+              item.qty++;
               renderCart();
               cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
           }
       }
-  }
-  
-  // Render cart function
-  function renderCart() {
-      cartBody.innerHTML = "";
       
-      if (cart.length === 0) {
-          cartBody.innerHTML = `
-              <div class="empty-cart">
-                  <i class="bi bi-cart-x"></i>
-                  <h4>Your cart is empty</h4>
-                  <p>Add some products to your cart</p>
-              </div>
-          `;
-          return;
+      // Decrease quantity function
+      function decreaseQty(id) {
+          const item = cart.find(item => item.id === id);
+          if (item) {
+              item.qty--;
+              if (item.qty < 1) {
+                  removeFromCart(id);
+              } else {
+                  renderCart();
+                  cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+              }
+          }
       }
       
-      cart.forEach(item => {
-          const itemDiv = document.createElement('div');
-          itemDiv.className = 'cart-item';
-          itemDiv.innerHTML = `
-              <div class="row align-items-center">
-                  <div class="col-md-1">
-                     <img src="${item.img}" alt="${item.name}" class="img-fluid rounded" style="width: 40px; height: 40px; object-fit: cover;">
-                   </div>
-                  <div class="col-md-5">
-                    
-                      <strong>${item.name}</strong>
+      // Render cart function
+      function renderCart() {
+          cartBody.innerHTML = "";
+          
+          if (cart.length === 0) {
+              cartBody.innerHTML = `
+                  <div class="empty-cart">
+                      <i class="bi bi-cart-x"></i>
+                      <h4>Your cart is empty</h4>
+                      <p>Add some products to your cart</p>
                   </div>
-                  <div class="col-md-2">
-                      <div class="d-flex align-items-center">
-                          <button class="btn btn-sm btn-outline-secondary quantity-btn" onclick="decreaseQty('${item.id}')">-</button>
-                          <span class="mx-2">${item.qty}</span>
-                          <button class="btn btn-sm btn-outline-secondary quantity-btn" onclick="increaseQty('${item.id}')">+</button>
+              `;
+              return;
+          }
+          
+          cart.forEach(item => {
+              const itemDiv = document.createElement('div');
+              itemDiv.className = 'cart-item';
+              itemDiv.innerHTML = `
+                  <div class="row align-items-center">
+                      <div class="col-md-1">
+                        <img src="${item.img}" alt="${item.name}" class="img-fluid rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                      </div>
+                      <div class="col-md-5">
+                        
+                          <strong>${item.name}</strong>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="d-flex align-items-center">
+                              <button class="btn btn-sm btn-outline-secondary quantity-btn" onclick="decreaseQty('${item.id}')">-</button>
+                              <span class="mx-2">${item.qty}</span>
+                              <button class="btn btn-sm btn-outline-secondary quantity-btn" onclick="increaseQty('${item.id}')">+</button>
+                          </div>
+                      </div>
+                      <div class="col-md-2 text-end">
+                          Rs. ${item.price.toLocaleString()}
+                      </div>
+                      <div class="col-md-2 text-end fw-bold">
+                          Rs. ${(item.price * item.qty).toLocaleString()}
+                      </div>
+                      <div class="col-md-1 text-center">
+                          <button class="btn btn-sm btn-link text-danger" onclick="removeFromCart('${item.id}')">
+                              <i class="bi bi-trash"></i>
+                          </button>
                       </div>
                   </div>
-                  <div class="col-md-2 text-end">
-                      Rs. ${item.price.toLocaleString()}
+              `;
+              cartBody.appendChild(itemDiv);
+          });
+          
+          const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+          const totalDiv = document.createElement('div');
+          totalDiv.className = 'total-row';
+          totalDiv.innerHTML = `
+              <div class="row">
+                  <div class="col-8 text-end">Subtotal:</div>
+                  <div class="col-4 text-end">Rs. ${total.toLocaleString()}</div>
+              </div>
+              <div class="row">
+                  <div class="col-8 text-end">Shipping:</div>
+                  <div class="col-4 text-end">Rs. ${total > 0 ? '80' : '0'}</div>
+              </div>
+              <div class="row mt-2">
+                  <div class="col-8 text-end"><h5>Total:</h5></div>
+                  <div class="col-4 text-end"><h5>Rs. ${(total > 0 ? total + 200 : 0).toLocaleString()}</h5></div>
+              </div>
+              
+              <div class="mt-4">
+                  <h5><i class="bi bi-truck"></i> Shipping Information</h5>
+                  <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="Full Name">
                   </div>
-                  <div class="col-md-2 text-end fw-bold">
-                      Rs. ${(item.price * item.qty).toLocaleString()}
+                  <div class="mb-3">
+                      <textarea class="form-control" placeholder="Shipping Address" rows="2"></textarea>
                   </div>
-                  <div class="col-md-1 text-center">
-                      <button class="btn btn-sm btn-link text-danger" onclick="removeFromCart('${item.id}')">
-                          <i class="bi bi-trash"></i>
-                      </button>
+                  <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="Contact Number">
                   </div>
               </div>
           `;
-          cartBody.appendChild(itemDiv);
-      });
-      
-      const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-      const totalDiv = document.createElement('div');
-      totalDiv.className = 'total-row';
-      totalDiv.innerHTML = `
-          <div class="row">
-              <div class="col-8 text-end">Subtotal:</div>
-              <div class="col-4 text-end">Rs. ${total.toLocaleString()}</div>
-          </div>
-          <div class="row">
-              <div class="col-8 text-end">Shipping:</div>
-              <div class="col-4 text-end">Rs. ${total > 0 ? '80' : '0'}</div>
-          </div>
-          <div class="row mt-2">
-              <div class="col-8 text-end"><h5>Total:</h5></div>
-              <div class="col-4 text-end"><h5>Rs. ${(total > 0 ? total + 200 : 0).toLocaleString()}</h5></div>
-          </div>
-          
-          <div class="mt-4">
-              <h5><i class="bi bi-truck"></i> Shipping Information</h5>
-              <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Full Name">
-              </div>
-              <div class="mb-3">
-                  <textarea class="form-control" placeholder="Shipping Address" rows="2"></textarea>
-              </div>
-              <div class="mb-3">
-                  <input type="tel" class="form-control" placeholder="Contact Number">
-              </div>
-          </div>
-      `;
-      cartBody.appendChild(totalDiv);
-  }
-  
-  // Checkout button handler
-  checkoutBtn.addEventListener('click', () => {
-      if (cart.length === 0) {
-          showAlert('Your cart is empty!', 'warning');
-          return;
+          cartBody.appendChild(totalDiv);
       }
       
-      cartModal.hide();
-      showAlert('Order placed successfully!', 'success');
-      cart = [];
-      cartCount.textContent = '0';
-  });
-  
-  // Show alert function
-  function showAlert(message, type) {
-      // Remove existing alerts
-      const existingAlert = document.querySelector('.alert');
-      if (existingAlert) existingAlert.remove();
+      // Checkout button handler
+      checkoutBtn.addEventListener('click', () => {
+          if (cart.length === 0) {
+              showAlert('Your cart is empty!', 'warning');
+              return;
+          }
+          
+          cartModal.hide();
+          showAlert('Order placed successfully!', 'success');
+          cart = [];
+          cartCount.textContent = '0';
+      });
       
-      const alertDiv = document.createElement('div');
-      alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
-      alertDiv.style.position = 'fixed';
-      alertDiv.style.top = '20px';
-      alertDiv.style.right = '20px';
-      alertDiv.style.zIndex = '9999';
-      alertDiv.innerHTML = `
-          ${message}
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-      `;
-      
-      document.body.appendChild(alertDiv);
-      
-      // Auto remove after 3 seconds
-      setTimeout(() => {
-          alertDiv.remove();
-      }, 3000);
-  }
-</script>
+      // Show alert function
+      function showAlert(message, type) {
+          // Remove existing alerts
+          const existingAlert = document.querySelector('.alert');
+          if (existingAlert) existingAlert.remove();
+          
+          const alertDiv = document.createElement('div');
+          alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+          alertDiv.style.position = 'fixed';
+          alertDiv.style.top = '20px';
+          alertDiv.style.right = '20px';
+          alertDiv.style.zIndex = '9999';
+          alertDiv.innerHTML = `
+              ${message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          `;
+          
+          document.body.appendChild(alertDiv);
+          
+          // Auto remove after 3 seconds
+          setTimeout(() => {
+              alertDiv.remove();
+          }, 3000);
+      }
+    </script>
 
   </body>
 </html>

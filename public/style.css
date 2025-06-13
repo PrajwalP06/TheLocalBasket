@@ -1,7 +1,12 @@
-
+body{
+    background-color: blanchedalmond;
+}
 
 .container{
-    padding: 10px;
+   
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 20px;
 }
 .footer{
     display: flex;
