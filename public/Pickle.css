@@ -2,7 +2,7 @@ body{
     background-color: #989eda;
 }
 .newCard{
-    width: 80%;
+    width: auto;
     height: auto;
     text-align: center;
     overflow: hidden;
@@ -13,7 +13,7 @@ body{
     height: 100px;
     width: 100%;
     object-fit: contain;
-    padding: 10px;
+    
     mix-blend-mode: multiply;
 }
 

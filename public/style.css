@@ -75,3 +75,26 @@ body{
     margin-top: 5%;
     position: absolute;
 }
+
+div.scrollItem{
+    background-color: aliceblue;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+
+}
+
+div.scrollItem div{
+    display: inline-block;
+    color: #0a0000;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.itemStl{
+    width: auto;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color:bisque;
+}

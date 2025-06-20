@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>       
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
+  
   <body>
 
         <!--Nav Bar-->
@@ -58,123 +59,134 @@
       
       <!--Header Image-->
     <section>
-      <div style="display: flex; justify-content: center; align-items: center; border:2px solid #000;">
-        <div style="display: flex; height: 200px; width:auto;"  >
-          <img src="images/Grand-Opening.png">
-          <video autoplay loop muted playsinline  style="height: auto; width: 100%; object-fit:fill;">
-            <source src="images/offer.mp4" type="video/mp4">
-          </video>
-          <img src="images/sales3.png">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/Grand-Opening.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <video autoplay loop muted playsinline  style="height: auto; width: 100%; object-fit:fill;">
+              <source src="images/offer.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item">
+            <img src="images/sales 2.png" class="d-block w-100" alt="...">
+          </div>
         </div>
       </div>
-          
-      </section>
-          <div class="container-fluid" style="padding: 20px;">
-            <div class="col-md-12">
-              <div class="row">
-                <!--First column-->
-                <div class="col-md-3">
-                    <div class="newCard">
-                      <img src="images/greenChilli Pickle.PNG">
-                      <div>
-                        <h3>Green Chilli</h3>
-                        <p>Fried Green chilli marinated with various spices.</p>
-                        <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
-                        <button class="btn btn-primary w-100" onclick="addToCart('p1', 'Green Chilli', 199,'images/greenChilli Pickle.PNG')">Add to Cart</button> 
-                        
-                      </div>
-                    </div>
-                  
-                  
-                    <div class="newCard">
-                      <img src="images/chicken Pickle.PNG">
-                      <div>
-                        <h3>Chicken Pickle</h3>
-                        <p>Rosted chicken mixed with spices.</p>
-                        <p><i class="bi bi-currency-rupee"></i><strong>399</strong></p>
-                        <button class="btn btn-primary w-100" onclick="addToCart('p5', 'Chicken Pickle', 399, 'images/chicken Pickle.PNG')">Add to Cart</button>
-                            
-                      </div>
-                    </div>
-                </div>
-
-                <!-- this is second column-->
-                <div class="col-md-3">
-                  <div class="newCard">
-                      <img src="images/mango Pickle.PNG">
-                    <div>
-                      <h3>Mango Pickle</h3>
-                      <p>Raw Mango mixed with boiled oil and spices</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>299</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p2', 'Mango Pickle', 299, 'images/mango Pickle.PNG')">Add to Cart</button> 
-        
-                    </div>
-                  </div> 
-
-                  <div class="newCard">
-                      <img src="images/Banana Chips.PNG">
-                    <div> 
-                      <h3>Banana Chips</h3>
-                      <p>Fried and salted banana chips.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>99</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p6', 'Banana Chips', 99,'images/Banana Chips.PNG')">Add to Cart</button>   
-                            
-                    </div>
-                  </div>
-                </div>
-
-                <!--third column-->
-                <div class="col-md-3">
-                  <div class="newCard">
-                    <img src="images/Mula ko acchar.PNG">
-                    <div>
-                      <h3>Radish Pickle</h3>
-                      <p>Radish mixed with various spices and marinated with boiled oil</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p3', 'Radish Pickle', 199, 'images/Mula ko acchar.PNG')">Add to Cart</button>
-                            
-                    </div>
-                  </div>
-
-                  <div class="newCard">
-                    <img src="images/Potato chips.PNG">
-                    <div>
-                      <h3>Potato Chips</h3>
-                      <p>Fried and salted Potato chips.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>99</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p7', 'Potato Chips', 99, 'images/Potato chips.PNG')">Add to Cart</button>
-                          
-                    </div>
-                  </div>
-                </div>
-                <!--fourth column-->
-                <div class="col-md-3">
-                  <div class="newCard">
-                    <img src="images/p4.png">
-                    <div>
-                      <h3>Soyachunk Pickle</h3>
-                      <p>Fried soyachunks marinated with different spices.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>199</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p4', 'Soyachunk Pickle', 199, 'images/p4.png')">Add to Cart</button>            
-                    </div>
-                  </div>
-
-                  <div class="newCard">
-                    <img src="images/Finger-Chips.PNG">
-                    <div>
-                      <h3>Finger Chips</h3>
-                      <p>Fried and salted Finger chips.</p>
-                      <p><i class="bi bi-currency-rupee"></i><strong>49</strong></p>
-                      <button class="btn btn-primary w-100" onclick="addToCart('p8', 'Finger Chips', 49, 'images/Finger-Chips.PNG')">Add to Cart</button>
-                        
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-        </div>
       
+      </section>
+      
+      <!--Horizontal Scroll-->
+
+      <div class="scrollItem">
+      <div class="itemStl">
+        
+          <img src="images/Finger-Chips.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Finger Chips</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>49</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p1', 'Finger Chips', 49, 'images/Finger-Chips.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/Banana Chips.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Banana Chips</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>99</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p2', 'Banana Chips', 99, 'images/Banana Chips.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/Potato chips.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Potato Chips</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>99</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p3', 'Potato Chips', 99, 'images/Potato chips.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/greenChilli Pickle.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Green Chilli</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>199</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p4', 'Green Chilli Pickle', 199, 'images/greenChilli Pickle.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/chicken Pickle.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Chicken Pickle</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>299</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p5', 'Finger Chips', 299, 'images/chicken Pickle.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/mango Pickle.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Mango Pickle</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>299</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p6', 'Mango Pickle', 299, 'images/mango Pickle.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/Mula ko acchar.PNG" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Mula ko Achar</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>199</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p7', 'Mula ko Achar', 199, 'images/Finger-Chips.PNG')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+     
+      <div class="itemStl">
+        
+          <img src="images/p4.png" style="width: auto; height: 80px; border-radius: 15px;"><br>
+          <div>
+            <strong>Soyachunk Pickle</strong>
+            <p>           
+              <small><i class="bi bi-currency-rupee"></i><strong>199</strong></small>
+              <br><button class="btn btn-primary" onclick="addToCart('p8', 'Soyachunk Pickle', 199, 'images/p4.png')">Add to Cart</button>
+            </p>  
+          </div>
+        
+      </div>
+      
+    </div>
+
+
         <!--Footer-->
         <section class="footer" >
           <div>
@@ -233,6 +245,30 @@
           </div>
       </div>
     </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
