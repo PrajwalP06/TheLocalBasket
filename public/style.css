@@ -97,4 +97,10 @@ div.scrollItem div{
     border: 2px solid #fff;
     border-radius: 8px;
     background-color:bisque;
+
+}.productDiv{
+    border: 2px solid #000;
+    height: auto;
+    width: auto;
+
 }
